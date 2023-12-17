@@ -1,0 +1,46 @@
+@charset "ISO-8859-1";
+
+
+h1{
+	
+	background-color:aquamarine;
+	
+	height: 50%;
+}
+#lside{
+	
+	
+	height:100% ;
+	width: 300px;
+	background-color: lawngreen;
+	padding: 30px;
+	
+	position: fixed;
+	left: 0%;
+	top: 0%;
+}
+#lside a{
+	
+	
+	color: black;
+	
+	}
+
+#main{
+	
+	margin-left: 400px;
+	
+	height: 50%;
+	
+	
+}
+
+
+#core{
+	
+	border: 10px;
+	
+	background-color: darkred;
+	
+	
+	}
