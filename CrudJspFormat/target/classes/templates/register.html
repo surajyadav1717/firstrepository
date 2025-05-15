@@ -1,0 +1,65 @@
+<!--<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register</title>
+</head>
+<body>
+<h2>Register</h2>
+<form th:action="@{/register}" th:object="${user}" method="post">
+    <label>Username: <input type="text" th:field="*{username}"/></label><br>
+    <label>Email: <input type="email" th:field="*{email}"/></label><br>
+    <label>Password: <input type="password" th:field="*{password}"/></label><br>
+    <button type="submit">Register</button>
+</form>
+<p th:text="${error}" style="color:red;"></p>
+<a th:href="@{/login}">Already have an account? Login</a>
+</body>
+</html>
+-->
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; }
+        form { max-width: 300px; margin: auto; }
+        label { display: block; margin-bottom: 10px; }
+        input { width: 100%; padding: 6px; }
+        button { padding: 8px 15px; background-color: #007bff; color: white; border: none; }
+        p { text-align: center; color: red; }
+        .link { text-align: center; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Register</h2>
+
+<form th:action="@{/register}" th:object="${user}" method="post">
+    <label>Username:
+        <input type="text" th:field="*{username}" required />
+    </label>
+
+	<label>Email:
+	       <input type="email" th:field="*{email}" required />
+	   </label>
+
+	
+    <label>Password:
+        <input type="password" th:field="*{password}" required />
+    </label>
+
+    <div style="text-align:center;">
+        <button type="submit">Register</button>
+    </div>
+</form>
+
+<p th:if="${error}" th:text="${error}"></p>
+
+<div class="link">
+    <a th:href="@{/login}">Already registered? Login</a>
+</div>
+
+</body>
+</html>

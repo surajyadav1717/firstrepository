@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            font-size: 14px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <title>Persons PDF</title>
+</head>
+<body>
+    <h2>Person List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="person : ${persons}">
+                <td th:text="${person.id}">1</td>
+                <td th:text="${person.fullName}">John Doe</td>
+                <td th:text="${person.email}">john@example.com</td>
+                <td th:text="${person.city}">Thane</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
